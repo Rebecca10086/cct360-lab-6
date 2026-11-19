@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Bloom Café | Home</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <nav class="navbar md:navbar-expand bg-1 fg-2" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Little Bloom Café</a>
+
+      <button class="btn-icon navbar-toggler" type="button"
+        data-bs-toggle="drawer" data-bs-target="#siteMenu"
+        aria-controls="siteMenu" aria-expanded="false" aria-label="Open navigation">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+
+      <dialog class="drawer drawer-end" id="siteMenu" tabindex="-1"
+        aria-labelledby="siteMenuTitle">
+        <div class="drawer-header">
+          <div class="drawer-title" id="siteMenuTitle">Navigation</div>
+          <button class="btn-close" type="button"
+            data-bs-dismiss="drawer" aria-label="Close navigation"></button>
+        </div>
+
+        <div class="drawer-body">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </dialog>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1>Little Bloom Café</h1>
+    <p>Espresso, loose-leaf tea, and fresh pastries in Mississauga.</p>
+
+    <div id="heroCarousel" class="carousel carousel-overlay mt-3"
+      role="region" aria-label="A look inside Little Bloom Café">
+      <div class="carousel-inner rounded-5">
+        <div class="carousel-item active">
+          <img class="d-block w-100 ratio ratio-21x9 object-fit-cover"
+            src="images/banner1.jpg" alt="Warmly lit café interior with wooden furniture">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 ratio ratio-21x9 object-fit-cover"
+            src="images/banner2.jpg" alt="A cup of coffee on a dark wooden table">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 ratio ratio-21x9 object-fit-cover"
+            src="images/banner3.jpg" alt="Iced drinks and pastries arranged on a table">
+        </div>
+      </div>
+
+      <div class="carousel-overlay-controls">
+        <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-icon-prev" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous slide</span>
+        </button>
+        <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-icon-next" aria-hidden="true"></span>
+          <span class="visually-hidden">Next slide</span>
+        </button>
+      </div>
+    </div>
+
+    <section id="menu" class="mt-5" aria-labelledby="menuTitle">
+      <h2 class="mb-4" id="menuTitle">More from our menu</h2>
+
+      <div class="row g-4">
+        <div class="col-12 md:col-6 lg:col-4">
+          <article class="card h-100 overflow-hidden">
+            <img class="w-100 ratio ratio-4x3 object-fit-cover" src="images/latte.jpg"
+              alt="Hot latte with leaf-shaped foam art in a green cup" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">Hot Latte</h3>
+              <p>Espresso mellowed with silky steamed milk.</p>
+              <details class="accordion-item">
+                <summary class="accordion-header">Details</summary>
+                <div class="accordion-body">A double shot stays present under a thin layer of microfoam.</div>
+              </details>
+              <button class="btn-solid theme-primary mt-3" type="button"
+                data-bs-toggle="dialog" data-bs-target="#latteDialog">About the hot latte</button>
+
+              <dialog class="dialog" id="latteDialog" aria-labelledby="latteTitle">
+                <div class="dialog-header">
+                  <h3 class="dialog-title" id="latteTitle">Hot Latte</h3>
+                  <button class="btn-close" type="button" data-bs-dismiss="dialog" aria-label="Close"></button>
+                </div>
+                <div class="dialog-body">
+                  <p>Try it with a butter croissant for a simple breakfast.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button class="btn-solid theme-primary" type="button" data-bs-dismiss="dialog">Close</button>
+                </div>
+              </dialog>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-4">
+          <article class="card h-100 overflow-hidden">
+            <img class="w-100 ratio ratio-4x3 object-fit-cover" src="images/iced-matcha.jpg"
+              alt="Tall glass of green iced matcha served on a tray" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">Iced Matcha Latte</h3>
+              <p>Whisked green tea poured over cold milk and ice.</p>
+              <details class="accordion-item">
+                <summary class="accordion-header">Details</summary>
+                <div class="accordion-body">The matcha has a grassy flavour and a gently bittersweet finish.</div>
+              </details>
+              <button class="btn-solid theme-primary mt-3" type="button"
+                data-bs-toggle="dialog" data-bs-target="#matchaDialog">About the iced matcha</button>
+
+              <dialog class="dialog" id="matchaDialog" aria-labelledby="matchaTitle">
+                <div class="dialog-header">
+                  <h3 class="dialog-title" id="matchaTitle">Iced Matcha Latte</h3>
+                  <button class="btn-close" type="button" data-bs-dismiss="dialog" aria-label="Close"></button>
+                </div>
+                <div class="dialog-body">
+                  <p>Give it a stir before sipping to mix the matcha and milk.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button class="btn-solid theme-primary" type="button" data-bs-dismiss="dialog">Close</button>
+                </div>
+              </dialog>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-4">
+          <article class="card h-100 overflow-hidden">
+            <img class="w-100 ratio ratio-4x3 object-fit-cover" src="images/earl-gery.jpg"
+              alt="A cup of amber tea beside a ceramic teapot" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">Earl Grey Tea</h3>
+              <p>Loose-leaf black tea with a bright bergamot aroma.</p>
+              <details class="accordion-item">
+                <summary class="accordion-header">Details</summary>
+                <div class="accordion-body">Bergamot gives this black tea a citrus finish with a light floral note.</div>
+              </details>
+              <button class="btn-solid theme-primary mt-3" type="button"
+                data-bs-toggle="dialog" data-bs-target="#teaDialog">About the Earl Grey</button>
+
+              <dialog class="dialog" id="teaDialog" aria-labelledby="teaTitle">
+                <div class="dialog-header">
+                  <h3 class="dialog-title" id="teaTitle">Earl Grey Tea</h3>
+                  <button class="btn-close" type="button" data-bs-dismiss="dialog" aria-label="Close"></button>
+                </div>
+                <div class="dialog-body">
+                  <p>Pair a pot of Earl Grey with a slice of banana bread.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button class="btn-solid theme-primary" type="button" data-bs-dismiss="dialog">Close</button>
+                </div>
+              </dialog>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-4">
+          <article class="card h-100 overflow-hidden">
+            <img class="w-100 ratio ratio-4x3 object-fit-cover" src="images/butter-croissant.jpg"
+              alt="Golden butter croissants resting on a wire rack" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">Butter Croissant</h3>
+              <p>A golden pastry with a crisp shell and soft layers inside.</p>
+              <details class="accordion-item">
+                <summary class="accordion-header">Details</summary>
+                <div class="accordion-body">Folding butter into the dough creates thin layers that puff up in the oven.</div>
+              </details>
+              <button class="btn-solid theme-primary mt-3" type="button"
+                data-bs-toggle="dialog" data-bs-target="#croissantDialog">About the butter croissant</button>
+
+              <dialog class="dialog" id="croissantDialog" aria-labelledby="croissantTitle">
+                <div class="dialog-header">
+                  <h3 class="dialog-title" id="croissantTitle">Butter Croissant</h3>
+                  <button class="btn-close" type="button" data-bs-dismiss="dialog" aria-label="Close"></button>
+                </div>
+                <div class="dialog-body">
+                  <p>Ask for it warmed if you prefer an extra-crisp crust.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button class="btn-solid theme-primary" type="button" data-bs-dismiss="dialog">Close</button>
+                </div>
+              </dialog>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-4">
+          <article class="card h-100 overflow-hidden">
+            <img class="w-100 ratio ratio-4x3 object-fit-cover" src="images/blueberry-muffin.jpg"
+              alt="A blueberry muffin topped with blueberries" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">Blueberry Muffin</h3>
+              <p>A soft muffin with tart blueberries and a golden top.</p>
+              <details class="accordion-item">
+                <summary class="accordion-header">Details</summary>
+                <div class="accordion-body">The berries soften as they bake and leave pockets of fruit throughout the crumb.</div>
+              </details>
+              <button class="btn-solid theme-primary mt-3" type="button"
+                data-bs-toggle="dialog" data-bs-target="#muffinDialog">About the blueberry muffin</button>
+
+              <dialog class="dialog" id="muffinDialog" aria-labelledby="muffinTitle">
+                <div class="dialog-header">
+                  <h3 class="dialog-title" id="muffinTitle">Blueberry Muffin</h3>
+                  <button class="btn-close" type="button" data-bs-dismiss="dialog" aria-label="Close"></button>
+                </div>
+                <div class="dialog-body">
+                  <p>The berry flavour goes well with a glass of iced matcha.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button class="btn-solid theme-primary" type="button" data-bs-dismiss="dialog">Close</button>
+                </div>
+              </dialog>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-4">
+          <article class="card h-100 overflow-hidden">
+            <img class="w-100 ratio ratio-4x3 object-fit-cover" src="images/banana-bread.jpg"
+              alt="Slices of banana bread on a plate beside a cup of coffee" loading="lazy">
+            <div class="card-body">
+              <h3 class="card-title">Banana Bread</h3>
+              <p>A thick slice of banana loaf with a lightly browned crust.</p>
+              <details class="accordion-item">
+                <summary class="accordion-header">Details</summary>
+                <div class="accordion-body">Ripe bananas keep the loaf soft and give each slice its sweetness.</div>
+              </details>
+              <button class="btn-solid theme-primary mt-3" type="button"
+                data-bs-toggle="dialog" data-bs-target="#bananaDialog">About the banana bread</button>
+
+              <dialog class="dialog" id="bananaDialog" aria-labelledby="bananaTitle">
+                <div class="dialog-header">
+                  <h3 class="dialog-title" id="bananaTitle">Banana Bread</h3>
+                  <button class="btn-close" type="button" data-bs-dismiss="dialog" aria-label="Close"></button>
+                </div>
+                <div class="dialog-body">
+                  <p>Try a toasted slice if you like the edges a little crisp.</p>
+                </div>
+                <div class="dialog-footer">
+                  <button class="btn-solid theme-primary" type="button" data-bs-dismiss="dialog">Close</button>
+                </div>
+              </dialog>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="theme-primary bg-2 fg-2 py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Little Bloom Café</p>
+    </div>
+  </footer>
+</body>
+</html>
